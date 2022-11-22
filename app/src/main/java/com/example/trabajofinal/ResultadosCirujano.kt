@@ -19,13 +19,14 @@ class ResultadosCirujano : AppCompatActivity() {
         val dato4=bundle?.getString("4")
         val dato5=bundle?.getString("5")
         val Infrome =findViewById<TextView>(R.id.TvInforme3)
+        val agradecimiento= findViewById<TextView>(R.id.TvThanks)
         val botonAvanzar= findViewById<Button>(R.id.BtnNext6)
         Infrome.text="El/La cirujano(a) se llama ${dato1} ${dato2}.Tiene ${dato3} años de edad y su" +
                 " DNI es ${dato4}; Está especializado en hacer operación de ${dato5} y está disponible para" +
                 " hacer una de éstas cuando sea necesario."
+        agradecimiento.text= "Muchas gracias por usar esta aplicacion. Vuelva pronto."
         botonAvanzar.setOnClickListener{
-            val avanzar= Intent (this, ActivityMedico::class.java)
-            startActivity(avanzar)
+            finish()
         }
     }
 }

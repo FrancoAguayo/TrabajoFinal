@@ -26,7 +26,7 @@ class ResultadosMedico : AppCompatActivity() {
                 " hasta la fecha con un titulo en ${dato6}. Actualmente se está alistando para atender a todo" +
                 " paciente que se le asigne."
         botonAvanzar.setOnClickListener{
-            val avanzar= Intent (this, ActivityMedico::class.java)
+            val avanzar= Intent (this, ActivityCirujano::class.java)
             startActivity(avanzar)
         }
     }
