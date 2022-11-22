@@ -26,7 +26,7 @@ class ResultadosCirujano : AppCompatActivity() {
                 " hacer una de éstas cuando sea necesario."
         agradecimiento.text= "Muchas gracias por usar esta aplicacion. Vuelva pronto."
         botonAvanzar.setOnClickListener{
-            finish()
+            finishAffinity()
         }
     }
 }
