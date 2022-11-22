@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         val ConviertoEtPeso= EtPeso.text.toString()
         val ConviertoEtAltura= EtAltura.text.toString()
         val ConviertoEtDiagnostico= EtDiagnostico.text.toString()
+
         val mostrarResultados= Intent (this, ResultadosPaciente::class.java)
         mostrarResultados.putExtra("1",ConviertoEtNombre)
         mostrarResultados.putExtra("2",ConviertoEtApellido)

@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/TvInforme2"
-        android:layout_width="397dp"
-        android:layout_height="187dp"
+        android:layout_width="401dp"
+        android:layout_height="287dp"
         android:fontFamily="@font/capriola"
         android:text="TextView"
         android:textColor="#000000"
