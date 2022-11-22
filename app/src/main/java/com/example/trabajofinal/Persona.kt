@@ -1,6 +1,6 @@
 package com.example.trabajofinal
 
-open class Persona {
+abstract class Persona {
     var nombre: String=""
     var apellido: String=""
     var edad: Int=0
@@ -11,5 +11,8 @@ open class Persona {
         this.apellido=apellido
         this.edad=edad
         this.dni=dni
+    }
+    override fun establecerEdad(edad: Int): Int{
+        return this.edad
     }
 }
