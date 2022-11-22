@@ -39,7 +39,7 @@
         android:layout_width="122dp"
         android:layout_height="75dp"
         android:backgroundTint="#0288EF"
-        android:text="Siguiente"
+        android:text="Salir"
         android:textColor="#101010"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
