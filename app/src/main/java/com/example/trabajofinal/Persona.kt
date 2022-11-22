@@ -31,7 +31,4 @@ abstract class Persona() :Funciones(), Parcelable {
         parcel.writeInt(edad)
         parcel.writeInt(dni)
     }
-    override fun describeContents(): Int {
-        return 0
-    }
 }
