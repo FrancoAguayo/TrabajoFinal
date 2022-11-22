@@ -8,7 +8,7 @@
     tools:context=".ActivityCirujano">
 
     <Button
-        android:id="@+id/btnNext"
+        android:id="@+id/BtnNext5"
         android:layout_width="122dp"
         android:layout_height="75dp"
         android:backgroundTint="#062DED"
