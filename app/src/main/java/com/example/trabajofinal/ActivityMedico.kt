@@ -26,8 +26,6 @@ class ActivityMedico : AppCompatActivity() {
         val EtDoctorate= findViewById<EditText>(R.id.EtDoctorate)
         val EtExperience= findViewById<EditText>(R.id.EtExperience)
 
-
-
         val ConviertoEtNombre= EtNombre.text.toString()
         val ConviertoEtApellido= EtApellido.text.toString()
         val ConviertoEtEdad= EtEdad.text.toString()
