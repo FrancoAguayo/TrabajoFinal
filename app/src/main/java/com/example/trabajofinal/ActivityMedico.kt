@@ -17,6 +17,8 @@ class ActivityMedico : AppCompatActivity() {
         }
     }
     fun setData(){
+        var medico1=Medico()
+        medico1.edad=0
         val EtNombre= findViewById<EditText>(R.id.EtName2)
         val EtApellido= findViewById<EditText>(R.id.EtSurname2)
         val EtEdad= findViewById<EditText>(R.id.EtAge2)
@@ -24,12 +26,15 @@ class ActivityMedico : AppCompatActivity() {
         val EtDoctorate= findViewById<EditText>(R.id.EtDoctorate)
         val EtExperience= findViewById<EditText>(R.id.EtExperience)
 
+
+
         val ConviertoEtNombre= EtNombre.text.toString()
         val ConviertoEtApellido= EtApellido.text.toString()
         val ConviertoEtEdad= EtEdad.text.toString()
         val ConviertoEtDNI= EtDNI.text.toString()
         val ConviertoEtDoc= EtDoctorate.text.toString()
         val ConviertoEtEx= EtExperience.text.toString()
+        //EtEdad.text=(paciente1.establecerEdad(21)).toString()
 
         val mostrarResultados2= Intent (this, ResultadosMedico::class.java)
         mostrarResultados2.putExtra("1",ConviertoEtNombre)

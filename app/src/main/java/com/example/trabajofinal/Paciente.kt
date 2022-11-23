@@ -14,6 +14,10 @@ class Paciente() : Persona(nombre = "", apellido = "", edad = 0, dni = 0) {
         diagnostico = parcel.readString().toString()
     }
 
+    override fun establecerEdad(edad: Int): Int{
+        this.edad=edad
+        return this.edad
+    }
     constructor(nombre: String,apellido: String,edad: Int,dni: Int,peso: Double,altura: Double
                 ,diagnostico: String): this (){
         this.nombre=nombre

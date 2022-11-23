@@ -15,10 +15,6 @@ abstract class Persona() :Funciones(), Parcelable {
         this.edad=edad
         this.dni=dni
     }
-    override fun establecerEdad(edad: Int): Int{
-        this.edad=edad
-        return this.edad
-    }
     constructor(parcel: Parcel) : this(){
         nombre= parcel.readString().toString()
         apellido= parcel.readString().toString()
