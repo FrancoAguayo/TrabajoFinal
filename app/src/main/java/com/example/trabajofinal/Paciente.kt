@@ -3,7 +3,7 @@ package com.example.trabajofinal
 import android.os.Parcel
 import android.os.Parcelable
 
-class Paciente() : Persona(nombre = "", apellido = "", edad = 0, dni = 0) {
+abstract class Paciente() : Persona(nombre = "", apellido = "", edad = 0, dni = 0) {
     var peso: Double=0.0
     var altura: Double=0.0
     var diagnostico: String=""
@@ -40,13 +40,4 @@ class Paciente() : Persona(nombre = "", apellido = "", edad = 0, dni = 0) {
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<Paciente> {
-        override fun createFromParcel(parcel: Parcel): Paciente {
-            return Paciente(parcel)
-        }
-
-        override fun newArray(size: Int): Array<Paciente?> {
-            return arrayOfNulls(size)
-        }
     }
-}
