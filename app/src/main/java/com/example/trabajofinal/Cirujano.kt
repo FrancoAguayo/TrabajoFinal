@@ -23,6 +23,10 @@ class Cirujano() : Persona(nombre = "", apellido = "", edad = 0, dni = 0) {
         parcel.writeString(operacion)
     }
 
+    override fun establecerEdad(edad: Int): Int {
+        TODO("Not yet implemented")
+    }
+
     override fun describeContents(): Int {
         return 0
     }
