@@ -3,22 +3,18 @@ package com.example.trabajofinal
 import android.os.Parcel
 import android.os.Parcelable
 
-abstract class Paciente() : Persona(nombre = "", apellido = "", edad = 0, dni = 0) {
-    var peso: Double=0.0
-    var altura: Double=0.0
-    var diagnostico: String=""
+data class Paciente(var peso: Double=0.0,var altura: Double=0.0,var diagnostico: String="") : Persona(), Parcelable {
 
     constructor(parcel: Parcel) : this() {
         peso = parcel.readDouble()
         altura = parcel.readDouble()
         diagnostico = parcel.readString().toString()
+        nombre = parcel.readString().toString()
+        apellido = parcel.readString().toString()
+        edad = parcel.readString().toString()
+        dni = parcel.readString().toString()
     }
-
-    override fun establecerEdad(edad: Int): Int{
-        this.edad=edad
-        return this.edad
-    }
-    constructor(nombre: String,apellido: String,edad: Int,dni: Int,peso: Double,altura: Double
+    constructor(nombre: String,apellido: String,edad: String,dni: String,peso: Double,altura: Double
                 ,diagnostico: String): this (){
         this.nombre=nombre
         this.apellido=apellido
@@ -30,7 +26,10 @@ abstract class Paciente() : Persona(nombre = "", apellido = "", edad = 0, dni = 
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        super.writeToParcel(parcel, flags)
+        parcel.writeString(nombre)
+        parcel.writeString(apellido)
+        parcel.writeString(edad)
+        parcel.writeString(dni)
         parcel.writeDouble(peso)
         parcel.writeDouble(altura)
         parcel.writeString(diagnostico)
@@ -40,4 +39,14 @@ abstract class Paciente() : Persona(nombre = "", apellido = "", edad = 0, dni = 
         return 0
     }
 
+    companion object CREATOR : Parcelable.Creator<Paciente> {
+        override fun createFromParcel(parcel: Parcel): Paciente {
+            return Paciente(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Paciente?> {
+            return arrayOfNulls(size)
+        }
     }
+
+}

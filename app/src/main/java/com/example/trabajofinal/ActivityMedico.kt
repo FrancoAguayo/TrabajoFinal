@@ -18,7 +18,6 @@ class ActivityMedico : AppCompatActivity() {
     }
     fun setData(){
         var medico1=Medico()
-        medico1.edad=0
         val EtNombre= findViewById<EditText>(R.id.EtName2)
         val EtApellido= findViewById<EditText>(R.id.EtSurname2)
         val EtEdad= findViewById<EditText>(R.id.EtAge2)

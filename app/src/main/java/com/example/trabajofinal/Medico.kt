@@ -3,16 +3,18 @@ package com.example.trabajofinal
 import android.os.Parcel
 import android.os.Parcelable
 
-class Medico() : Persona(nombre = "", apellido = "", edad = 0, dni = 0) {
-    var aniosExperiencia: Int=0
-    var tipoDoctorado: String=""
+data class Medico(var aniosExperiencia: Int=0,var tipoDoctorado: String="") : Persona(),Parcelable {
 
     constructor(parcel: Parcel) : this() {
         aniosExperiencia = parcel.readInt()
         tipoDoctorado = parcel.readString().toString()
+        nombre = parcel.readString().toString()
+        apellido = parcel.readString().toString()
+        edad = parcel.readString().toString()
+        dni = parcel.readString().toString()
     }
 
-    constructor(nombre: String,apellido: String,edad: Int,dni: Int,aniosExperiencia: Int,
+    constructor(nombre: String,apellido: String,edad: String,dni: String,aniosExperiencia: Int,
                 tipoDoctorado: String): this(){
         this.nombre=nombre
         this.apellido=apellido
@@ -23,13 +25,12 @@ class Medico() : Persona(nombre = "", apellido = "", edad = 0, dni = 0) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        super.writeToParcel(parcel, flags)
         parcel.writeInt(aniosExperiencia)
         parcel.writeString(tipoDoctorado)
-    }
-
-    override fun establecerEdad(edad: Int): Int {
-        TODO("Not yet implemented")
+        parcel.writeString(nombre)
+        parcel.writeString(apellido)
+        parcel.writeString(edad)
+        parcel.writeString(dni)
     }
 
     override fun describeContents(): Int {
