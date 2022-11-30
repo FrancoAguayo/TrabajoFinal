@@ -6,13 +6,13 @@ import android.os.Parcelable
 data class Paciente(var peso: String="",var altura: String="",var diagnostico: String="") : Persona(), Parcelable {
 
     constructor(parcel: Parcel) : this() {
-        peso = parcel.readString().toString()
-        altura = parcel.readString().toString()
-        diagnostico = parcel.readString().toString()
         nombre = parcel.readString().toString()
         apellido = parcel.readString().toString()
         edad = parcel.readString().toString()
         dni = parcel.readString().toString()
+        peso = parcel.readString().toString()
+        altura = parcel.readString().toString()
+        diagnostico = parcel.readString().toString()
     }
     constructor(nombre: String,apellido: String,edad: String,dni: String,peso: String,altura: String
                 ,diagnostico: String): this (){

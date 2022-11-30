@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         pacienteNuevo.edad=EtEdad.text.toString()
         pacienteNuevo.dni=EtDNI.text.toString()
         pacienteNuevo.peso=EtPeso.text.toString()
-        pacienteNuevo.peso=EtAltura.text.toString()
+        pacienteNuevo.altura=EtAltura.text.toString()
         pacienteNuevo.diagnostico=EtDiagnostico.text.toString()
 
         val intent= Intent(this,ResultadosPaciente::class.java)
