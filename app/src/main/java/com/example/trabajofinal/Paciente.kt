@@ -3,18 +3,18 @@ package com.example.trabajofinal
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Paciente(var peso: Double=0.0,var altura: Double=0.0,var diagnostico: String="") : Persona(), Parcelable {
+data class Paciente(var peso: String="",var altura: String="",var diagnostico: String="") : Persona(), Parcelable {
 
     constructor(parcel: Parcel) : this() {
-        peso = parcel.readDouble()
-        altura = parcel.readDouble()
+        peso = parcel.readString().toString()
+        altura = parcel.readString().toString()
         diagnostico = parcel.readString().toString()
         nombre = parcel.readString().toString()
         apellido = parcel.readString().toString()
         edad = parcel.readString().toString()
         dni = parcel.readString().toString()
     }
-    constructor(nombre: String,apellido: String,edad: String,dni: String,peso: Double,altura: Double
+    constructor(nombre: String,apellido: String,edad: String,dni: String,peso: String,altura: String
                 ,diagnostico: String): this (){
         this.nombre=nombre
         this.apellido=apellido
@@ -30,8 +30,8 @@ data class Paciente(var peso: Double=0.0,var altura: Double=0.0,var diagnostico:
         parcel.writeString(apellido)
         parcel.writeString(edad)
         parcel.writeString(dni)
-        parcel.writeDouble(peso)
-        parcel.writeDouble(altura)
+        parcel.writeString(peso)
+        parcel.writeString(altura)
         parcel.writeString(diagnostico)
     }
 

@@ -12,28 +12,25 @@ class ActivityCirujano : AppCompatActivity() {
         setContentView(R.layout.activity_cirujano)
         val botonResultados= findViewById<Button>(R.id.BtnNext5)
         botonResultados.setOnClickListener(){
-            setData()
+            createCirujano()
         }
     }
-    fun setData(){
+    fun createCirujano(){
         val EtNombre= findViewById<EditText>(R.id.EtName3)
         val EtApellido= findViewById<EditText>(R.id.EtSurname3)
         val EtEdad= findViewById<EditText>(R.id.EtAge3)
         val EtDNI= findViewById<EditText>(R.id.EtNDNI3)
         val EtOperacion= findViewById<EditText>(R.id.EtSurgery)
+        val cirujanoNuevo=Cirujano()
 
-        val ConviertoEtNombre= EtNombre.text.toString()
-        val ConviertoEtApellido= EtApellido.text.toString()
-        val ConviertoEtEdad= EtEdad.text.toString()
-        val ConviertoEtDNI= EtDNI.text.toString()
-        val ConviertoEtOperacion= EtOperacion.text.toString()
+        cirujanoNuevo.nombre=EtNombre.text.toString()
+        cirujanoNuevo.apellido=EtApellido.text.toString()
+        cirujanoNuevo.edad=EtEdad.text.toString()
+        cirujanoNuevo.dni=EtDNI.text.toString()
+        cirujanoNuevo.operacion=EtOperacion.text.toString()
 
-        val mostrarResultados3= Intent (this, ResultadosCirujano::class.java)
-        mostrarResultados3.putExtra("1",ConviertoEtNombre)
-        mostrarResultados3.putExtra("2",ConviertoEtApellido)
-        mostrarResultados3.putExtra("3",ConviertoEtEdad)
-        mostrarResultados3.putExtra("4",ConviertoEtDNI)
-        mostrarResultados3.putExtra("5",ConviertoEtOperacion)
-        startActivity(mostrarResultados3)
+        val intent= Intent (this, ResultadosCirujano::class.java)
+        intent.putExtra("cirujano",cirujanoNuevo)
+        startActivity(intent)
     }
 }

@@ -3,10 +3,10 @@ package com.example.trabajofinal
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Medico(var aniosExperiencia: Int=0,var tipoDoctorado: String="") : Persona(),Parcelable {
+data class Medico(var aniosExperiencia: String="",var tipoDoctorado: String="") : Persona(),Parcelable {
 
     constructor(parcel: Parcel) : this() {
-        aniosExperiencia = parcel.readInt()
+        aniosExperiencia = parcel.readString().toString()
         tipoDoctorado = parcel.readString().toString()
         nombre = parcel.readString().toString()
         apellido = parcel.readString().toString()
@@ -14,7 +14,7 @@ data class Medico(var aniosExperiencia: Int=0,var tipoDoctorado: String="") : Pe
         dni = parcel.readString().toString()
     }
 
-    constructor(nombre: String,apellido: String,edad: String,dni: String,aniosExperiencia: Int,
+    constructor(nombre: String,apellido: String,edad: String,dni: String,aniosExperiencia: String,
                 tipoDoctorado: String): this(){
         this.nombre=nombre
         this.apellido=apellido
@@ -25,7 +25,7 @@ data class Medico(var aniosExperiencia: Int=0,var tipoDoctorado: String="") : Pe
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeInt(aniosExperiencia)
+        parcel.writeString(aniosExperiencia)
         parcel.writeString(tipoDoctorado)
         parcel.writeString(nombre)
         parcel.writeString(apellido)
