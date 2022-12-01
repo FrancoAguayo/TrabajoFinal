@@ -25,12 +25,12 @@ data class Medico(var aniosExperiencia: String="",var tipoDoctorado: String="") 
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(aniosExperiencia)
-        parcel.writeString(tipoDoctorado)
         parcel.writeString(nombre)
         parcel.writeString(apellido)
         parcel.writeString(edad)
         parcel.writeString(dni)
+        parcel.writeString(aniosExperiencia)
+        parcel.writeString(tipoDoctorado)
     }
 
     override fun describeContents(): Int {
