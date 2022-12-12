@@ -15,13 +15,7 @@ class ResultadosCirujano : AppCompatActivity() {
         val informe =findViewById<TextView>(R.id.TvInforme3)
         val botonAvanzar= findViewById<Button>(R.id.BtnNext6)
         val agradecimiento= findViewById<TextView>(R.id.TvThanks)
-        val cirujanoRecibido=intent.getParcelableExtra<Cirujano>("cirujano")
-        if(cirujanoRecibido!=null){
-            informe.text="El/La cirujano(a) se llama ${cirujanoRecibido.nombre} ${cirujanoRecibido.apellido}." +
-                    " Tiene ${cirujanoRecibido.edad} años de edad y su DNI es ${cirujanoRecibido.dni};" +
-                    " Está especializado en hacer operación de ${cirujanoRecibido.operacion} y está disponible para" +
-                    " hacer una de éstas cuando sea necesario."
-        }
+        informe.text="¡Listo! El paciente ya se encuentra atendido."
         agradecimiento.text= "Muchas gracias por usar esta aplicacion. Vuelva pronto."
         botonAvanzar.setOnClickListener{
             finishAffinity()

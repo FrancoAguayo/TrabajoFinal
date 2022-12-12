@@ -21,7 +21,8 @@ class ResultadosPaciente : AppCompatActivity() {
                     " ${pacienteRecibido.apellido}. Tiene ${pacienteRecibido.edad} años de edad y su" +
                     " DNI es ${pacienteRecibido.dni}; tiene un peso de ${pacienteRecibido.peso} kg y mide" +
                     " ${pacienteRecibido.altura}  metros de altura." +
-                    " Se lo/a ha diagnosticado con ${pacienteRecibido.diagnostico} y se encuentra atendido/a."
+                    " Se lo/a ha diagnosticado con ${pacienteRecibido.diagnostico} y está esperando" +
+                    " a ser atendido/a."
         }
         botonSalir.setOnClickListener{
             val avanzar= Intent (this, ActivityMedico::class.java)

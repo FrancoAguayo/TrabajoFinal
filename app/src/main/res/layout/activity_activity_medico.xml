@@ -7,172 +7,6 @@
     android:background="#C392FA"
     tools:context=".ActivityMedico">
 
-    <EditText
-        android:id="@+id/EtDoctorate"
-        android:layout_width="133dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="Doctorado"
-        android:inputType="text"
-        android:textColorHint="#7A0022FF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.021"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
-
-    <EditText
-        android:id="@+id/EtExperience"
-        android:layout_width="133dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="Años"
-        android:inputType="number"
-        android:textColorHint="#7A0022FF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.942"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
-
-    <TextView
-        android:id="@+id/TvExperience"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Años de Experiencia"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.981"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486" />
-
-    <TextView
-        android:id="@+id/TvDoctorate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Doctorado"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.489" />
-
-    <TextView
-        android:id="@+id/TvAge2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edad"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313" />
-
-    <TextView
-        android:id="@+id/TvSurname2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apellido"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16" />
-
-    <EditText
-        android:id="@+id/EtDNI2"
-        android:layout_width="133dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="D.N.I."
-        android:inputType="number"
-        android:textColorHint="#7A0022FF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.942"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.357" />
-
-    <EditText
-        android:id="@+id/EtSurname2"
-        android:layout_width="133dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="Apellido"
-        android:textColorHint="#79003FFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.942"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
-
-    <TextView
-        android:id="@+id/TvName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nombre"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161" />
-
-    <TextView
-        android:id="@+id/TvDNI2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DNI"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.82"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313" />
-
-    <EditText
-        android:id="@+id/EtName2"
-        android:layout_width="133dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="Nombre"
-        android:textColorHint="#79003FFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.021"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
-
-    <EditText
-        android:id="@+id/EtAge2"
-        android:layout_width="133dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="Edad"
-        android:inputType="number"
-        android:textColorHint="#7A0022FF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.021"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.357" />
-
     <TextView
         android:id="@+id/TvTitle"
         android:layout_width="wrap_content"
@@ -199,6 +33,48 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
+        app:layout_constraintVertical_bias="0.798" />
+
+    <TextView
+        android:id="@+id/TvPregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eston son los medicos disponibles. ¿Cual quieres?"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <RadioGroup
+        android:layout_width="353dp"
+        android:layout_height="309dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" >
+
+        <RadioButton
+            android:id="@+id/RbRoberto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Roberto Abadia" />
+
+        <RadioButton
+            android:id="@+id/RbLeo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Leonardo Fumarola" />
+
+        <RadioButton
+            android:id="@+id/RbDaniel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daniel Gentile" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

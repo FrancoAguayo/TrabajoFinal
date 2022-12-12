@@ -13,7 +13,8 @@ class ResultadosMedico : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultados_medico)
         val informe =findViewById<TextView>(R.id.TvInforme2)
-        val botonAvanzar= findViewById<Button>(R.id.BtnNext4)
+        val botonAvanzar= findViewById<Button>(R.id.BtnYes)
+        val botonRetroceder= findViewById<Button>(R.id.BtnNo)
         val medicoRecibido=intent.getParcelableExtra<Medico>("medico")
         if(medicoRecibido!=null){
             informe.text="El/La doctor(a) se llama ${medicoRecibido.nombre} ${medicoRecibido.apellido}." +
@@ -23,8 +24,11 @@ class ResultadosMedico : AppCompatActivity() {
                     " paciente que se le asigne."
         }
         botonAvanzar.setOnClickListener{
-            val avanzar= Intent (this, ActivityCirujano::class.java)
+            val avanzar= Intent (this, ResultadosCirujano::class.java)
             startActivity(avanzar)
+        }
+        botonRetroceder.setOnClickListener{
+            finish()
         }
     }
 }
