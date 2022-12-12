@@ -3,15 +3,20 @@ package com.example.trabajofinal
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
+import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val ivCruz= findViewById<ImageView>(R.id.ivCruz)
+        Picasso.get()
+            .load("http://i.imgur.com/Uw5GBGt.png")
+            .resize(50,50)
+            .centerCrop()
+            .into(ivCruz)
         val botonResultados= findViewById<Button>(R.id.BtnNext)
         botonResultados.setOnClickListener(){
             createPaciente()
@@ -33,17 +38,49 @@ class MainActivity : AppCompatActivity() {
         val EtPeso= findViewById<EditText>(R.id.EtWeight)
         val EtAltura= findViewById<EditText>(R.id.EtHeight)
         val EtDiagnostico= findViewById<EditText>(R.id.EtDiagnosis)
-        val pacienteNuevo=Paciente()
-        pacienteNuevo.nombre=EtNombre.text.toString()
-        pacienteNuevo.apellido=EtApellido.text.toString()
-        pacienteNuevo.edad=EtEdad.text.toString()
-        pacienteNuevo.dni=EtDNI.text.toString()
-        pacienteNuevo.peso=EtPeso.text.toString()
-        pacienteNuevo.altura=EtAltura.text.toString()
-        pacienteNuevo.diagnostico=EtDiagnostico.text.toString()
 
-        val intent= Intent(this,ResultadosPaciente::class.java)
-        intent.putExtra("paciente",pacienteNuevo)
-        startActivity(intent)
-    }
+        val ConviertoEtNombre= EtNombre.text.toString()
+        val ConviertoEtApellido= EtApellido.text.toString()
+        val ConviertoEtEdad= EtEdad.text.toString()
+        val ConviertoEtDni= EtDNI.text.toString()
+        val ConviertoEtPeso= EtPeso.text.toString()
+        val ConviertoEtAltura= EtAltura.text.toString()
+        val ConviertoEtDiagnostico= EtDiagnostico.text.toString()
+
+            if(ConviertoEtNombre.isEmpty()){
+                Toast.makeText(this,"No hay un nombre ingresado",Toast.LENGTH_SHORT).show()
+            }
+            else if(ConviertoEtApellido.isEmpty()){
+                Toast.makeText(this,"No hay un apellido ingresado",Toast.LENGTH_SHORT).show()
+            }
+            else if(ConviertoEtEdad.isEmpty()){
+                Toast.makeText(this,"No hay una edad ingresada",Toast.LENGTH_SHORT).show()
+            }
+            else if(ConviertoEtDni.isEmpty()){
+                Toast.makeText(this,"No hay un dni ingresado",Toast.LENGTH_SHORT).show()
+            }
+            else if(ConviertoEtPeso.isEmpty()){
+                Toast.makeText(this,"No hay una peso ingresado",Toast.LENGTH_SHORT).show()
+            }
+            else if(ConviertoEtAltura.isEmpty()){
+                Toast.makeText(this,"No hay una altura ingresada",Toast.LENGTH_SHORT).show()
+            }
+            else if(ConviertoEtDiagnostico.isEmpty()){
+                Toast.makeText(this,"No se especificó el diagnostico.",Toast.LENGTH_SHORT).show()
+            }
+            else{
+                val pacienteNuevo=Paciente()
+                pacienteNuevo.nombre=ConviertoEtNombre
+                pacienteNuevo.apellido=ConviertoEtApellido
+                pacienteNuevo.edad=ConviertoEtEdad
+                pacienteNuevo.dni=ConviertoEtDni
+                pacienteNuevo.peso=ConviertoEtPeso
+                pacienteNuevo.altura=ConviertoEtAltura
+                pacienteNuevo.diagnostico=ConviertoEtDiagnostico
+
+                val intent= Intent(this,ResultadosPaciente::class.java)
+                intent.putExtra("paciente",pacienteNuevo)
+                startActivity(intent)
+            }
+        }
 }
