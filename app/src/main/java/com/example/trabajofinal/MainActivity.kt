@@ -7,16 +7,16 @@ import android.widget.*
 import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val ivCruz= findViewById<ImageView>(R.id.ivCruz)
+        val IvCruz= findViewById<ImageView>(R.id.ivCruz)
+        val url="https://i.pinimg.com/originals/7d/8b/7e/7d8b7eaff56ec97e6df928bce9bd9f3d.jpg"
         Picasso.get()
-            .load("http://i.imgur.com/Uw5GBGt.png")
+            .load(url)
             .resize(50,50)
             .centerCrop()
-            .into(ivCruz)
+            .into(IvCruz)
         val botonResultados= findViewById<Button>(R.id.BtnNext)
         botonResultados.setOnClickListener(){
             createPaciente()

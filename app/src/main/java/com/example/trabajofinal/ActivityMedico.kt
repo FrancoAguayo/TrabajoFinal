@@ -4,11 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.squareup.picasso.Picasso
 
 class ActivityMedico : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_activity_medico)
+        val IvDoctor= findViewById<ImageView>(R.id.IvDoctor)
+        val url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_8kccb13Bzdj7Zos3tLkOudE2XprUt8NMApOGjLm7RmD3Swg_46H_fmktB4YkZzACaTQ&usqp=CAU"
+        Picasso.get()
+            .load(url)
+            .resize(50,50)
+            .centerCrop()
+            .into(IvDoctor)
         val botonResultados= findViewById<Button>(R.id.BtnNext3)
         botonResultados.setOnClickListener(){
             createMedico()
