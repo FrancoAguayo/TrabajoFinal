@@ -24,7 +24,7 @@ class ResultadosMedico : AppCompatActivity() {
                     " paciente que se le asigne."
         }
         botonAvanzar.setOnClickListener{
-            val avanzar= Intent (this, ResultadosCirujano::class.java)
+            val avanzar= Intent (this, ResultadosFinales::class.java)
             startActivity(avanzar)
         }
         botonRetroceder.setOnClickListener{

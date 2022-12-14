@@ -29,7 +29,7 @@ class ActivityCirujano : AppCompatActivity() {
         cirujanoNuevo.dni=EtDNI.text.toString()
         cirujanoNuevo.operacion=EtOperacion.text.toString()
 
-        val intent= Intent (this, ResultadosCirujano::class.java)
+        val intent= Intent (this, ResultadosFinales::class.java)
         intent.putExtra("cirujano",cirujanoNuevo)
         startActivity(intent)
     }
