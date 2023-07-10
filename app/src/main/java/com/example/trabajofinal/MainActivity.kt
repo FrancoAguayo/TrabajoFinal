@@ -1,10 +1,18 @@
 package com.example.trabajofinal
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.squareup.picasso.Picasso
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+lateinit var service: ApiService
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +30,7 @@ class MainActivity : AppCompatActivity() {
             createPaciente()
         }
     }
+    @SuppressLint("SuspiciousIndentation")
     fun createPaciente(){
         val TvNombre= findViewById<TextView>(R.id.TvName)
         val TvApellido= findViewById<TextView>(R.id.TvSurname)
