@@ -6,6 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+lateinit var service: ApiService
+val TAG_LOGS = "Alumno Franco"
 
 class ResultadosMedico : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
@@ -16,6 +24,7 @@ class ResultadosMedico : AppCompatActivity() {
         val botonAvanzar= findViewById<Button>(R.id.BtnYes)
         val botonRetroceder= findViewById<Button>(R.id.BtnNo)
         val medicoRecibido=intent.getParcelableExtra<Medico>("medico")
+        val btnBucsar = findViewById<Button>(R.id.btnBuscar)
         if(medicoRecibido!=null){
             informe.text="El/La doctor(a) se llama ${medicoRecibido.nombre} ${medicoRecibido.apellido}." +
                     " Tiene ${medicoRecibido.edad} años de edad y su DNI es ${medicoRecibido.dni};" +

@@ -8,7 +8,7 @@
     tools:context=".ResultadosMedico">
 
     <ImageView
-        android:id="@+id/ivCruz2"
+        android:id="@+id/ivBuscar"
         android:layout_width="106dp"
         android:layout_height="99dp"
         android:layout_centerInParent="true"
@@ -22,7 +22,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/btnNext"
+        android:id="@+id/btnBuscar"
         android:layout_width="138dp"
         android:layout_height="57dp"
         android:backgroundTint="#3F51B5"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.976" />
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/etBuscar"
         android:layout_width="133dp"
         android:layout_height="54dp"
         android:ems="10"
