@@ -33,6 +33,7 @@ class ResultadosMedico : AppCompatActivity() {
         service = retrofit.create<ApiService>(ApiService::class.java)
         getPostById()
     }
+        @SuppressLint("SetTextI18n")
         fun getPostById() {
             val informe =findViewById<TextView>(R.id.TvInforme2)
             val botonAvanzar= findViewById<Button>(R.id.BtnYes)
